@@ -3,6 +3,7 @@ def binary_search(arr, query):
     low = 0
     high = len(arr) - 1
     iterations = 0
+    arr.sort()
 
     while low <= high:
         mid = (low + high) // 2
@@ -23,7 +24,6 @@ def binary_search(arr, query):
         return (iterations, arr[low])  # Верхня межа
 
 # Приклад використання:
-arr = [0.1, 1.3, 4.7, 2.9, 6.1, 0.51, 0.6]
-arr.sort()
-print(arr)
+arr = [0.1, 0.51, 0.6, 1.3, 2.9, 4.7, 6.1]
+
 print(binary_search(arr, 0.6))
